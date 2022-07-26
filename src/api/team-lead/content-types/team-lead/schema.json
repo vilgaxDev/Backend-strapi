@@ -1,0 +1,40 @@
+{
+  "kind": "collectionType",
+  "collectionName": "team_leads",
+  "info": {
+    "singularName": "team-lead",
+    "pluralName": "team-leads",
+    "displayName": "Team_lead"
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "Name": {
+      "type": "relation",
+      "relation": "oneToOne",
+      "target": "api::customer-detail.customer-detail",
+      "mappedBy": "name"
+    },
+    "Annual_earning": {
+      "type": "integer"
+    },
+    "photo": {
+      "allowedTypes": [
+        "images",
+        "files",
+        "videos",
+        "audios"
+      ],
+      "type": "media",
+      "multiple": true
+    },
+    "date": {
+      "type": "date"
+    },
+    "createdby": {
+      "type": "string"
+    }
+  }
+}

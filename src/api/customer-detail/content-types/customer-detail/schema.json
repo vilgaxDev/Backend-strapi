@@ -1,0 +1,46 @@
+{
+  "kind": "collectionType",
+  "collectionName": "customer_details",
+  "info": {
+    "singularName": "customer-detail",
+    "pluralName": "customer-details",
+    "displayName": "customer_detail",
+    "description": ""
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "Name": {
+      "type": "string",
+      "required": true
+    },
+    "Location": {
+      "type": "string",
+      "required": true
+    },
+    "Phone_number": {
+      "type": "integer"
+    },
+    "Gender": {
+      "type": "boolean"
+    },
+    "Date_of_creation": {
+      "type": "date"
+    },
+    "Created_by": {
+      "type": "string",
+      "required": true
+    },
+    "name": {
+      "type": "relation",
+      "relation": "oneToOne",
+      "target": "api::team-lead.team-lead",
+      "inversedBy": "Name"
+    },
+    "Product": {
+      "type": "string"
+    }
+  }
+}
